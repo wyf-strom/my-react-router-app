@@ -1,7 +1,7 @@
 /*
  * @Date: 2025-03-03 14:54:25
  * @LastEditors: wangyifeng
- * @LastEditTime: 2025-03-04 15:46:42
+ * @LastEditTime: 2025-03-04 16:04:18
  * @Description: 无权限页面
  */
 export default function AuthErrorPage() {
