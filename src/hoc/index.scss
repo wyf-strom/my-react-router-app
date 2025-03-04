@@ -1,0 +1,16 @@
+// 对应样式
+.dashboard-skeleton {
+  display: flex;
+  height: 100vh;
+
+  .skeleton-sidebar {
+    width: 240px;
+    background: #f8f9fa;
+    border-right: 1px solid #eee;
+  }
+
+  .skeleton-main {
+    flex: 1;
+    padding: 24px;
+  }
+}

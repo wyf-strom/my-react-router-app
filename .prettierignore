@@ -1,0 +1,11 @@
+# 忽略目录
+**/node_modules
+**/dist
+**/build
+**/coverage
+
+# 忽略文件
+*.svg
+*.log
+*.lock
+*.zip

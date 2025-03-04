@@ -1,0 +1,11 @@
+###
+ # @Date: 2025-03-04 09:19:05
+ # @LastEditors: wangyifeng
+ # @LastEditTime: 2025-03-04 15:22:12
+ # @Description: 
+### 
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+#npm test
+npm run lint:lint-staged
