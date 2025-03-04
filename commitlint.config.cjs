@@ -1,7 +1,7 @@
 /*
  * @Date: 2025-03-04 15:59:27
  * @LastEditors: wangyifeng
- * @LastEditTime: 2025-03-04 16:05:55
+ * @LastEditTime: 2025-03-04 16:24:39
  * @Description: Commitlint 配置
  */
 module.exports = {
@@ -65,7 +65,12 @@ module.exports = {
     useAI: false,
     aiNumber: 1,
     themeColorCode: '',
-    scopes: [],
+    scopes: [
+      { value: 'app', name: 'app:       系统业务' },
+      { value: 'home', name: 'home:      首页相关' },
+      { value: 'account', name: 'account:   账户相关' },
+      { value: 'comment', name: 'comment:   评论相关' },
+    ],
     allowCustomScopes: true,
     allowEmptyScopes: true,
     customScopesAlign: 'bottom',
