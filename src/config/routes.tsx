@@ -1,10 +1,12 @@
 /*
  * @Date: 2025-03-03 14:37:07
  * @LastEditors: wangyifeng
- * @LastEditTime: 2025-03-04 09:09:15
+ * @LastEditTime: 2025-03-04 17:17:28
  * @Description: 路由配置
  */
 import React from 'react';
+
+import request from '@/api/request.ts';
 
 import AuthErrorPage from '../components/AuthErrorPage.js';
 import ErrorBoundary from '../components/ErrorBoundary.js';
@@ -24,7 +26,7 @@ const lazyLoad = (path: string) =>
 
 // 用户页数据加载器
 const userLoader = async ({ params }: { params: any }) => {
-  const response = await fetch(`/api/users/${params.userId}`);
+  const response = await request.get(`/api/users/${params.userId}`);
   if (!response.ok) throw new Error('用户数据加载失败');
   return response.json();
 };

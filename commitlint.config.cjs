@@ -1,8 +1,8 @@
 /*
  * @Date: 2025-03-04 15:59:27
  * @LastEditors: wangyifeng
- * @LastEditTime: 2025-03-04 16:24:39
- * @Description: Commitlint 配置
+ * @LastEditTime: 2025-03-04 16:27:08
+ * @Description: git提交 Commitlint 配置
  */
 module.exports = {
   // 继承的规则
@@ -71,6 +71,8 @@ module.exports = {
       { value: 'account', name: 'account:   账户相关' },
       { value: 'comment', name: 'comment:   评论相关' },
     ],
+    enableMultipleScopes: true,
+    scopeEnumSeparator: ',',
     allowCustomScopes: true,
     allowEmptyScopes: true,
     customScopesAlign: 'bottom',

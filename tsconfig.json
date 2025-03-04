@@ -15,9 +15,10 @@
     "noEmit": true,
     "allowImportingTsExtensions": true,
     "types": ["vite/client"],
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"],
+      "@store/*": ["./src/stores/*"]
     }
   },
   "include": ["src"],
