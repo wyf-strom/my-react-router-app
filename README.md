@@ -1,7 +1,7 @@
 <!--
  * @Date: 2025-03-03 14:29:22
  * @LastEditors: wangyifeng
- * @LastEditTime: 2025-03-05 12:42:17
+ * @LastEditTime: 2025-03-05 13:08:56
  * @Description:
 -->
 
@@ -26,3 +26,8 @@ Stylelint
 koroFileHeader
 
 ## css文件格式统一为scss
+
+## git commit格式
+
+git commit -m 'bug: 修复 xxx 功能'
+git commit -m 'feat: 增加 xxx 功能'
