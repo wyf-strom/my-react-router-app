@@ -7,7 +7,7 @@ interface BaseResponse<T = any> {
   message?: string;
 }
 
-// 创建自定义实例
+// 创建axios实例
 const service: AxiosInstance = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
   timeout: 15000,
