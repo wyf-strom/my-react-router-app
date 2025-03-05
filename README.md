@@ -1,7 +1,7 @@
 <!--
  * @Date: 2025-03-03 14:29:22
  * @LastEditors: wangyifeng
- * @LastEditTime: 2025-03-04 14:58:01
+ * @LastEditTime: 2025-03-05 12:42:17
  * @Description:
 -->
 
@@ -23,5 +23,6 @@ If you are developing a production application, we recommend using TypeScript an
 ESLint
 Prettier
 Stylelint
+koroFileHeader
 
 ## css文件格式统一为scss
