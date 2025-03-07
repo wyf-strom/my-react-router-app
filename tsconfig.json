@@ -18,7 +18,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@store/*": ["./src/stores/*"]
+      "@store/*": ["./src/stores/*"],
+      "antd/es/*": ["node_modules/antd/es/*"]
     }
   },
   "include": ["src"],
