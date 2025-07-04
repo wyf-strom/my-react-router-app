@@ -1,0 +1,12 @@
+/* css变量 */
+
+/* 默认主题（亮色） */
+:root {
+  --primary-color: #1890ff;
+  --link-color: #1890ff;
+}
+
+[data-theme="dark"] {
+  --primary-color: #177ddc;
+  --link-color: #177ddc;
+}

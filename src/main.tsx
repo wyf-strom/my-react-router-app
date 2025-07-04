@@ -1,7 +1,7 @@
 /*
  * @Date: 2025-03-03 14:29:22
  * @LastEditors: wangyifeng
- * @LastEditTime: 2025-03-05 12:38:44
+ * @LastEditTime: 2025-07-04 15:55:23
  * @Description:
  */
 import React from 'react';
@@ -9,6 +9,9 @@ import ReactDOM from 'react-dom/client';
 import { RouterProvider, createHashRouter } from 'react-router-dom';
 
 import { RootStore, RootStoreProvider } from '@store/rootStore';
+import { ConfigProvider } from 'antd';
+
+import antdTheme from '@/styles/antd-theme';
 
 import routes from './config/routes';
 import './index.css';
@@ -18,8 +21,10 @@ const rootStore = new RootStore();
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RootStoreProvider value={rootStore}>
-      <RouterProvider router={router} />
-    </RootStoreProvider>
+    <ConfigProvider theme={antdTheme}>
+      <RootStoreProvider value={rootStore}>
+        <RouterProvider router={router} />
+      </RootStoreProvider>
+    </ConfigProvider>
   </React.StrictMode>
 );
