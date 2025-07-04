@@ -1,4 +1,4 @@
-import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios';
+import axios, { AxiosError, type AxiosInstance, type AxiosResponse } from 'axios';
 
 // 基础响应类型
 interface BaseResponse<T = any> {
@@ -60,10 +60,9 @@ function handleFileDownload(response: AxiosResponse) {
     type: response.headers['content-type'],
   });
 
-  //@ts-ignore
+  //@ts-expect-error -- 不晓得
   if (typeof window.navigator.msSaveBlob !== 'undefined') {
-    // IE/Edge
-    //@ts-ignore
+    //@ts-expect-error -- 不晓得
     window.navigator.msSaveBlob(blob, filename);
   } else {
     // 现代浏览器

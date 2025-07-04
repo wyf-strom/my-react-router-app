@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx --no -- commitlint --edit 
+#使用本地安装的 commitlint 工具（不自动安装），检查即将提交的 commit 消息（从 Git 提供的临时文件中读取）是否符合规范
+#在每次 git commit 时自动执行，对提交消息进行校验
+# npx --no -- commitlint --edit 

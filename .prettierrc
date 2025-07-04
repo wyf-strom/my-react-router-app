@@ -9,15 +9,6 @@
   "bracketSpacing": true,
   "bracketSameLine": true,
   "arrowParens": "avoid",
-  "cssEnable": ["css", "scss"],
-
-  "jsxBracketSameLine": false,
-  "react/jsx-max-props-per-line": [1, { "when": "multiline" }],
-
-  "typeScriptFormatOptions": {
-    "typeLiteralSeparator": "semicolon"
-  },
-
   "overrides": [
     {
       "files": "*.tsx",

@@ -1,7 +1,7 @@
 <!--
  * @Date: 2025-03-03 14:29:22
  * @LastEditors: wangyifeng
- * @LastEditTime: 2025-03-05 13:11:46
+ * @LastEditTime: 2025-07-03 16:10:59
  * @Description:
 -->
 
@@ -32,3 +32,7 @@ koroFileHeader
 git commit -m 'bug: 修复 xxx 功能'
 git commit -m 'feat: 增加 xxx 功能'
 git commit -m 'style: 修改代码格式'
+
+## 释关闭了commitlint
+
+注释关闭了commitlint ,要恢复，在.husky/commit-msg 中解开注释即可

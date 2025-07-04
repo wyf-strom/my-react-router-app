@@ -1,12 +1,13 @@
 /*
  * @Date: 2025-03-03 14:29:22
  * @LastEditors: wangyifeng
- * @LastEditTime: 2025-03-07 11:47:05
+ * @LastEditTime: 2025-07-04 09:53:46
  * @Description:
  */
 import react from '@vitejs/plugin-react';
 
-import path from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { visualizer } from 'rollup-plugin-visualizer';
 import AutoImport from 'unplugin-auto-import/vite';
 import { type PluginOption, defineConfig } from 'vite';
@@ -14,9 +15,10 @@ import viteCompression from 'vite-plugin-compression';
 import eslint from 'vite-plugin-eslint';
 import { AntdResolve, createStyleImportPlugin } from 'vite-plugin-style-import';
 
+// 导入主题配置
 import { antdTheme } from './src/styles/antd-theme';
 
-// 导入主题配置
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [
@@ -30,7 +32,7 @@ export default defineConfig({
     }),
     eslint({
       fix: true,
-      include: ['src/**/*.ts', 'src/**/*.tsx'],
+      include: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'], // 明确包含文件类型
     }),
     // 自动导入组件
     AutoImport({
@@ -59,12 +61,6 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          // 可选：手动拆分 chunk
-          antd: ['antd'],
-          react: ['react', 'react-dom'],
-          icons: ['@ant-design/icons'],
-        },
         // 入口文件归类到 js 目录
         entryFileNames: 'js/[name]-[hash].js',
         // 代码分割后的 chunk 文件归类到 js 目录
@@ -82,6 +78,12 @@ export default defineConfig({
             return 'fonts/[name]-[hash][extname]';
           }
           return 'assets/[name]-[hash][extname]';
+        },
+        manualChunks: {
+          // 可选：手动拆分 chunk
+          antd: ['antd'],
+          react: ['react', 'react-dom'],
+          icons: ['@ant-design/icons'],
         },
       },
     },

@@ -1,7 +1,7 @@
 /*
  * @Date: 2025-03-03 14:37:07
  * @LastEditors: wangyifeng
- * @LastEditTime: 2025-03-04 17:17:28
+ * @LastEditTime: 2025-07-03 14:27:54
  * @Description: 路由配置
  */
 import React from 'react';
@@ -27,8 +27,8 @@ const lazyLoad = (path: string) =>
 // 用户页数据加载器
 const userLoader = async ({ params }: { params: any }) => {
   const response = await request.get(`/api/users/${params.userId}`);
-  if (!response.ok) throw new Error('用户数据加载失败');
-  return response.json();
+  if (response.status !== 200) throw new Error('用户数据加载失败');
+  return response;
 };
 
 // 文章页数据加载器
