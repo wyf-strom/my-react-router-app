@@ -26,6 +26,9 @@
     "*.module.css": "css",
     "*.module.scss": "scss"
   },
+  "stylelint.config": {
+    "extends": "./.stylelintrc.dev.json" // 强制使用开发配置
+  },
   "stylelint.enable": true,
   "stylelint.validate": ["css", "scss"],
   "css.validate": false,

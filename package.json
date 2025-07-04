@@ -75,7 +75,7 @@
       "prettier --write"
     ],
     "*.{scss,css}": [
-      "stylelint --fix",
+      "stylelint --config .stylelintrc.prod.json --fix",
       "prettier --write"
     ],
     "*.{cjs,json}": [

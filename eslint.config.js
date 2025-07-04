@@ -1,7 +1,7 @@
 /*
  * @Date: 2025-07-03 11:31:00
  * @LastEditors: wangyifeng
- * @LastEditTime: 2025-07-03 14:14:45
+ * @LastEditTime: 2025-07-04 10:35:29
  * @Description:
  */
 import pluginReact from 'eslint-plugin-react';
@@ -16,7 +16,7 @@ import globals from 'globals';
 
 export default [
   // 基础配置
-  { ignores: ['dist'] },
+  { ignores: ['dist', 'src/auto-imports.d.ts'] },
   js.configs.recommended,
 
   // Prettier 配置

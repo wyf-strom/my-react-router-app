@@ -1,7 +1,7 @@
 .skeleton-container {
   max-width: 800px;
-  margin: 0 auto;
   padding: 20px;
+  margin: 0 auto;
 }
 
 .skeleton-header {
@@ -51,7 +51,6 @@
   }
 }
 
-// 格式化前
 .container {
   padding: 10px;
 
