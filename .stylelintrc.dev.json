@@ -6,6 +6,7 @@
   ],
   "rules": {
     "order/order": null,
-    "order/properties-order": null
+    "order/properties-order": null,
+    "declaration-empty-line-before": null
   }
 }
